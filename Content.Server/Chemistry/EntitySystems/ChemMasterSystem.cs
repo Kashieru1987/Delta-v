@@ -9,6 +9,7 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
+using Content.Shared.Fluids.EntitySystems;
 using Content.Shared.Labels.EntitySystems;
 using Content.Shared.Storage;
 using JetBrains.Annotations;
@@ -50,6 +51,7 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, EntInsertedIntoContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, EntRemovedFromContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
+            SubscribeLocalEvent<ChemMasterComponent, DrainedTargetEvent>(SubscribeUpdateUiState); // DeltaV - Chemmaster UI updates when drained into
 
             //SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetModeMessage>(OnSetModeMessage); // DeltaV - removed discarding
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSortingTypeCycleMessage>(OnCycleSortingTypeMessage);
