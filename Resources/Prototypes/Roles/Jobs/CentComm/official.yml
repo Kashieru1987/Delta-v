@@ -3,7 +3,7 @@
   name: job-name-centcommoff
   description: job-description-centcommoff
   playTimeTracker: JobCentralCommandOfficial
-  setPreference: false
+  # setPreference: false # Delta-V - Centcomm Loadouts
   startingGear: CentcommGear
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-hos
