@@ -2,6 +2,7 @@
 - type: vendingMachineInventory
   id: ClothesMateInventory
   startingInventory:
+    BikeHorn: 25
     ClothingBackpack: 5
     ClothingBackpackDuffel: 5
     ClothingBackpackSatchel: 3
