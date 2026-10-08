@@ -1,0 +1,39 @@
+- type: entity
+  parent: BaseItem
+  id: SkubHorn
+  name: skub horn
+  description: a strange horn...
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/bikehorn.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Fun/bikehorn.rsi
+  - type: EmitSoundOnUse
+    sound: &SoundSkub
+      collection: Skub
+  - type: EmitSoundOnLand
+    sound: *SoundSkub
+  - type: EmitSoundOnTrigger
+    sound: *SoundSkub
+  - type: EmitSoundOnActivate
+    sound: *SoundSkub
+  - type: EmitSoundOnCollide
+    sound: *SoundSkub
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: SkubHorn
+  id: SkubHornMelee
+  name: melee skub horn
+  description: a heavy, strange skub horn
+  components:
+  - type: MeleeWeapon
+    autoAttack: true
+    attackRate: 10
+    soundHit: *SoundSkub
+    damage:
+      types:
+        Blunt: 5
+
